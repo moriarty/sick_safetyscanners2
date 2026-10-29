@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 project(sick_safetyscanners2)
 
+if(POLICY CMP0167)
+  cmake_policy(SET CMP0167 NEW)
+endif()
+
 # Default to C99
 if (NOT CMAKE_C_STANDARD)
     set(CMAKE_C_STANDARD 99)
